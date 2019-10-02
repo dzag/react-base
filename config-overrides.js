@@ -15,7 +15,8 @@ module.exports = {
     ]),
     addWebpackAlias({
       '@': path.resolve(__dirname, 'src'),
-      '@env': path.resolve(__dirname, 'src/environments')
+      '@env': path.resolve(__dirname, 'src/environments'),
+      '@app': path.resolve(__dirname, 'src/app'),
     }),
     addEnvReplacementFull(),
     addEnvReplacementShort(),
