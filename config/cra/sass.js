@@ -14,7 +14,8 @@ const addSassShortPaths = (paths) => config => {
     .find(i => (i.loader || '')
       .includes('sass-loader'));
 
-  sassLoader.options.includePaths = paths;
+  sassLoader.options.sassOptions = sassLoader.options.sassOptions || {};
+  sassLoader.options.sassOptions.includePaths = paths;
 
   return config;
 };
